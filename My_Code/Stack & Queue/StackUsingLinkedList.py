@@ -1,0 +1,46 @@
+class Node:
+    def __init__(self,value):
+        self.value = value
+        self.next  = None
+    
+
+class stack:
+    def __init__(self,value):
+        new_node = Node(value)
+        self.top = new_node
+        self.height = 1
+
+    def printStack(self):
+        temp = self.top
+        while temp:
+            print(temp.value)
+            temp = temp.next
+    
+    def push(self,value):
+        new_node = Node(value)
+        if self.height == 0:
+            self.top = new_node
+  
+        else:
+            new_node.next = self.top
+            self.top = new_node
+        self.height += 1
+
+    def pop(self):
+        if self.height == 0:
+            return None
+        temp = self.top
+        self.top = self.top.next
+        temp.next = None
+        self.height -= 1
+        return temp.value
+
+
+My_stack = stack(1)
+My_stack.push(2)
+My_stack.push(3)
+
+print(My_stack.pop(),'\n')
+
+My_stack.printStack()
+        
