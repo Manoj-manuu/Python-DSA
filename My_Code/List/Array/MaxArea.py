@@ -22,4 +22,4 @@ def maxArea(arr):
             right -= 1
     
     return maxAreaa
-print(maxArea([3,7,5,6,8,4]))
+print(maxArea([3,7,5,6,9,8,4]))
