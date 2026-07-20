@@ -17,4 +17,3 @@ def longest_consecutive_sequence(nums):
         
 print(longest_consecutive_sequence([100, 4, 200, 1, 3, 2]) )
 print(longest_consecutive_sequence([10,20, 1, 3, 2]) )
-print(longest_consecutive_sequence([76,77,78,10,20, 1, 3, 2,5,4]) )
