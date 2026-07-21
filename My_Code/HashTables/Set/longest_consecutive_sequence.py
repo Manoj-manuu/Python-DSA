@@ -14,6 +14,9 @@ def longest_consecutive_sequence(nums):
             longest_sequence = max(longest_sequence,current_sequence)
             
     return longest_sequence
+
+
         
 print(longest_consecutive_sequence([100, 4, 200, 1, 3, 2]) )
-print(longest_consecutive_sequence([10,20, 1, 3, 2]) )
+print(longest_consecutive_sequence([10,20, 1, 3, 2]))
+print(longest_consecutive_sequence([1,2, 4, 6]) )
