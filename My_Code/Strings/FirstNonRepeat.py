@@ -25,5 +25,5 @@ def firstNonRepeat(strr):
 
 print(firstNonRepeat("abaRb150"))
 
-print(firstNonRepeat("abRb150"))
+print(firstNonRepeat("477"))
 
