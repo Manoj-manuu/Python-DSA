@@ -62,7 +62,7 @@ my_heap.insert(55)
 my_heap.insert(60)
 my_heap.insert(50)
 my_heap.insert(65)
-my_heap.insert(5)
+
 
 print(my_heap.heap)
 
