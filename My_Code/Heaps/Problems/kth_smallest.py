@@ -57,18 +57,18 @@ class MaxHeap:
 
 
 
-#### WRITE FIND_KTH_SMALLEST FUNCTION HERE ####
-#                                             #
-#    This is a separate function that is      #
-#    not a method within the Heap class.      #
-#    Indent all the way to the left.          #
-#                                             #
-###############################################
+def find_kth_smallest(nums,k):
+    my_heap = MaxHeap()
+    
+    for num in nums:
+        my_heap.insert(num)
+        
+        if len(my_heap.heap) > k:
+            my_heap.remove()
+        
+    return my_heap.remove()
 
 
-
-
-# Test cases
 nums = [[3,2,1,5,6,4], [6,5,4,3,2,1], [1,2,3,4,5,6], [3,2,3,1,2,4,5,5,6]]
 ks = [2, 3, 4, 7]
 expected_outputs = [2, 3, 4, 5]
@@ -76,10 +76,12 @@ expected_outputs = [2, 3, 4, 5]
 for i in range(len(nums)):
     print(f'Test case {i+1}...')
     print(f'Input: {nums[i]} with k = {ks[i]}')
-    # result = find_kth_smallest(nums[i], ks[i])
-    # print(f'Output: {result}')
+    result = find_kth_smallest(nums[i], ks[i])
+    print(f'Output: {result}')
     print(f'Expected output: {expected_outputs[i]}')
-    # print(f'Test passed: {result == expected_outputs[i]}')
-    print('---------------------------------------')
+    print(f'Test passed: {result == expected_outputs[i]}')
+    
+    
+
 
 
