@@ -9,7 +9,7 @@ class LinkedList:
         newnode = Node(value)
         self.head = newnode
         self.tail = newnode
-        self.lenght =+ 1
+        self.length = 1
     
     def printList(self):
         temp = self.head
@@ -27,10 +27,10 @@ class LinkedList:
             newnode.prev = self.tail
             self.tail.next = newnode
             self.tail = newnode
-        self.length =+ 1
+        self.length += 1
         
     def pop(self):
-        if self.length is None or self.head is None:
+        if self.length == 0:
             return None
         temp = self.tail
         if self.length == 1:
@@ -44,19 +44,19 @@ class LinkedList:
         return temp.value
     
     def is_palindrome(self):
-        if self.lenght <=1:
+        if self.length <=1:
             return True
         
         forward = self.head
         backward = self.tail
 
-        for _ in range(self.lenght//2):
+        for _ in range(self.length//2):
 
             if forward.value != backward.value:
                 return False
             
             forward = forward.next
-            backward = backward.next
+            backward = backward.prev
         return True
 
         
